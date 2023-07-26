@@ -1,7 +1,9 @@
 import requests
 from time import perf_counter
 from concurrent.futures import ThreadPoolExecutor
+from tabulate import tabulate
 
+# request the given url and time it
 def request_get_by_url(url:str,*,auth_token = None) -> float:
     start = perf_counter()
     if auth_token:
@@ -17,6 +19,13 @@ def request_get_by_url(url:str,*,auth_token = None) -> float:
     end = perf_counter()
     return end-start
 
+# create the table
+def create_table(times:list):
+    column_names = ["Fastest Time(s)","Slowest Time(s)","Average Time(s)"]
+    table = tabulate([[min(times),max(times),sum(times)/len(times)]], headers=column_names,tablefmt="fancy_grid")
+    print(table)
+
+# thread worker
 def http_caller(url:str,paralell_req:int,*,auth_token = None) -> str :
     urls = tuple(url for _ in range(paralell_req))
     with ThreadPoolExecutor(max_workers=paralell_req) as pool:
@@ -24,7 +33,9 @@ def http_caller(url:str,paralell_req:int,*,auth_token = None) -> str :
             times = (list(pool.map(request_get_by_url,urls,auth_token)))
         else:
             times = (list(pool.map(request_get_by_url,urls)))
-    return f"Request for {url}:\nFastest time: {min(times)} seconds\nSlowest time: {max(times)} seconds\nAvg time: {sum(times)/len(times)} seconds"
+    print( f"Request for {url}:")
+    create_table(times)
+    return f"Fastest time: {min(times)} seconds\nSlowest time: {max(times)} seconds\nAvg time: {sum(times)/len(times)} seconds"
 
 if __name__ == "__main__":
 
@@ -39,6 +50,7 @@ if __name__ == "__main__":
     auth_token = input("Authentication (leave blank if not any): ")
 
     print(http_caller(url,paralell_req,auth_token = auth_token))
+
 
 
 
