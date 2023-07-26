@@ -1,0 +1,31 @@
+Player 1 total cards,Player 2 total cards,Player 1 card,Player 2 card,Winner,War
+13,13,7 of Diamond,2 of Diamond,Player 1,False
+14,12,2 of Hearts,10 of Hearts,Player 2,False
+13,13,Q of Diamond,9 of Diamond,Player 1,False
+14,12,3 of Hearts,9 of Hearts,Player 2,False
+13,13,A of Hearts,5 of Diamond,Player 1,False
+14,12,8 of Hearts,6 of Hearts,Player 1,False
+15,11,6 of Diamond,3 of Diamond,Player 1,False
+16,10,8 of Diamond,K of Hearts,Player 2,False
+15,11,4 of Diamond,4 of Hearts,None,True
+15,11,K of Diamond,Q of Hearts,Player 1,True
+20,6,2 of Diamond,2 of Hearts,None,True
+20,6,5 of Diamond,8 of Diamond,Player 2,True
+15,11,A of Hearts,K of Hearts,Player 1,False
+16,10,6 of Hearts,2 of Hearts,Player 1,False
+17,9,8 of Hearts,10 of Hearts,Player 2,False
+16,10,3 of Diamond,3 of Hearts,None,True
+16,10,5 of Hearts,7 of Diamond,Player 2,True
+11,15,A of Diamond,9 of Diamond,Player 1,False
+12,14,Q of Hearts,Q of Diamond,None,True
+12,14,J of Diamond,10 of Hearts,Player 1,True
+16,10,K of Diamond,3 of Hearts,Player 1,False
+17,9,K of Hearts,9 of Hearts,Player 1,False
+18,8,A of Hearts,8 of Diamond,Player 1,False
+19,7,2 of Hearts,2 of Diamond,None,True
+19,7,Q of Diamond,4 of Hearts,Player 1,True
+24,2,5 of Diamond,J of Hearts,Player 2,False
+23,3,8 of Hearts,5 of Hearts,Player 1,False
+24,2,10 of Hearts,5 of Diamond,Player 1,False
+25,1,Q of Hearts,J of Hearts,Player 1,False
+26,0,None,None,Player 1,False
