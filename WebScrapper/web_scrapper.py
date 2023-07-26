@@ -20,22 +20,22 @@ class WebScrapper:
     def __init__(self,url:str,attributes: tuple,item_length:int = 50,
                 export_json:bool = False, json_file_name:str ="",
                 export_csv:bool = False,csv_file_name:str = "",
-                repeat:bool = False,repeat_in_seconds:int = 5) -> None:
+                repeat:bool = False,repeat_in_minutes:int = 1) -> None:
         
 
         self.logger = initialize_logger()
         self.logger.info("Creating the web scrapper class instance.")
         self.title_element,self.author_class,self.author_inner_element = attributes
 
-        #check if seconds repeated is correct
-        if repeat and(repeat_in_seconds < 5 or not isinstance(repeat_in_seconds,int)):
+        #check if minutes repeated is correct
+        if repeat and(repeat_in_minutes < 1 or not isinstance(repeat_in_minutes,int)):
             self.logger.debug("Repeat seconds error.")
             raise ValueError("The seconds for repeating must be at least 1 and a number!")
 
         self.repeat = repeat
-        self.repeat_in_seconds = repeat_in_seconds
+        self.repeat_in_minutes = repeat_in_minutes
         if self.repeat:
-            print(f"Scheduled repeat for every {self.repeat_in_seconds} seconds.")
+            print(f"Scheduled repeat for every {self.repeat_in_minutes} seconds.")
 
         #some other checks for url and item length
         if not urlparse(url).scheme and not urlparse(url).netloc:
@@ -132,7 +132,7 @@ class WebScrapper:
     #shedule job
     def create_job(self) -> None:
     
-        schedule.every(self.repeat_in_seconds).seconds.do(self.scrape_data)
+        schedule.every(self.repeat_in_minutes).minutes.do(self.scrape_data)
         while True:
             schedule.run_pending()
             time.sleep(1)
@@ -155,7 +155,7 @@ class WebScrapper:
 
         #if we need to continue scrapping and no current jobs, create a shedule job
         if self.repeat and not schedule.get_jobs():
-            self.logger.info(f"Repeating every {self.repeat_in_seconds} seconds")
+            self.logger.info(f"Repeating every {self.repeat_in_minutes} seconds")
             self.create_job()
 
 if __name__ == "__main__":
