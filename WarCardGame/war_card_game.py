@@ -39,6 +39,8 @@ class WarGame:
         self._player2_won_stack = []
 
         self.game_on = True
+
+#<----------------PROPERTIES-------------------------------------------------->  
     
     @property
     def deck(self):
@@ -52,6 +54,14 @@ class WarGame:
     def player2_cards(self):
         return self._player2_cards
     
+    @property
+    def player1_total_cards(self):
+           return len(self.player1_cards) + len(self._player1_won_stack)
+    
+    @property
+    def player2_total_cards(self):
+           return len(self.player2_cards) + len(self._player2_won_stack)
+
 #<----------------DECK FUNCTIONS-------------------------------------------------->  
 
     def _create_deck(self) -> None:
@@ -131,15 +141,15 @@ class WarGame:
         print(f"Player 2: {player2_card_rank[0]}")
 
         #calculations for the csv file
-        player1_total_cards = len(self.player1_cards)+len(self._player1_won_stack)+len(player1_face_down_cards) if war else len(self.player1_cards)+len(self._player1_won_stack)+1+len(player1_face_down_cards)
-        player2_total_cards = len(self.player2_cards)+len(self._player2_won_stack)+len(player2_face_down_cards) if war else len(self.player2_cards)+len(self._player2_won_stack)+1+len(player2_face_down_cards)
+        player1_total_turn_cards = self.player1_total_cards + len(player1_face_down_cards) if war else self.player1_total_cards + 1 + len(player1_face_down_cards)
+        player2_total_turn_cards = self.player2_total_cards + len(player2_face_down_cards) if war else self.player2_total_cards + 1 + len(player2_face_down_cards)
         
         #if player 1's card is higher
         if player1_card_rank[1] > player2_card_rank[1]:
             print("Player 1's card is higher. Thus he gets the cards.")
             #append result to csv
-            self.add_round_to_csv([player1_total_cards, 
-                                   player2_total_cards,
+            self.add_round_to_csv([player1_total_turn_cards, 
+                                   player2_total_turn_cards,
                                    player1_card_rank[0], player2_card_rank[0],"Player 1",str(False)])
             #if this was a war round, remove/append multiple cards
             if war:
@@ -154,8 +164,8 @@ class WarGame:
         elif player1_card_rank[1] < player2_card_rank[1]:
             print("Player 2's card is higher. Thus he gets the cards.")
             #append result to csv
-            self.add_round_to_csv([player1_total_cards, 
-                                   player2_total_cards,
+            self.add_round_to_csv([player1_total_turn_cards, 
+                                   player2_total_turn_cards,
                                    player1_card_rank[0], player2_card_rank[0],"Player 2",str(False)])
             #if this was a war round, remove/append multiple cards
             if war:
@@ -166,8 +176,8 @@ class WarGame:
         # last option is war
         else:
             print("WAR!")
-            self.add_round_to_csv([player1_total_cards, 
-                                   player2_total_cards,
+            self.add_round_to_csv([player1_total_turn_cards, 
+                                   player2_total_turn_cards,
                                    player1_card_rank[0], player2_card_rank[0],"None",str(True)])
             self.war(player1_card,player2_card,continuing_card_index)
         time.sleep(2)
@@ -242,7 +252,8 @@ class WarGame:
             #keeping track of which index of the cards needs to be popped
             continuing_card_index = 0
 
-            #if one of the players has no cards change to their win stack
+            #if one of the players has no cards change to their win stack if he is not empty
+            
             if not len(self.player1_cards) and len(self._player1_won_stack):
                 print("Player 1 changed to won stack!")
                 self.change_to_win_stack("player1")
@@ -251,13 +262,13 @@ class WarGame:
                 print("Player 2 changed to won stack!")
                 self.change_to_win_stack("player2")
                 
-            print("Player 1 total cards: ",len(self._player1_cards) + len(self._player1_won_stack))
-            print("Player 2 total cards: ",len(self._player2_cards) + len(self._player2_won_stack))
+            print("Player 1 total cards: ",self.player1_total_cards)
+            print("Player 2 total cards: ",self.player2_total_cards)
             #if a player has all the cards they win
-            if (len(self.player1_cards) + len(self._player1_won_stack) == WarGame._NUM_OF_CARDS or len(self.player2_cards) + len(self._player2_won_stack) == WarGame._NUM_OF_CARDS):
-                winner = "Player 1" if len(self.player1_cards) + len(self._player1_won_stack) == WarGame._NUM_OF_CARDS  else "Player 2"
+            if (self.player1_total_cards == WarGame._NUM_OF_CARDS or self.player2_total_cards == WarGame._NUM_OF_CARDS):
+                winner = "Player 1" if self.player1_total_cards == WarGame._NUM_OF_CARDS  else "Player 2"
                 print(f"{winner} has all the cards and wins!")
-                self.add_round_to_csv([len(self._player1_cards) + len(self._player1_won_stack),len(self._player2_cards) + len(self._player2_won_stack),
+                self.add_round_to_csv([self.player1_total_cards, self.player2_total_cards,
                                        "None", "None", winner, str(False)])
                 time.sleep(2)
                 self.game_on = False
