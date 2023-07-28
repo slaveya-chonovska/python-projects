@@ -61,7 +61,8 @@ class TicTacToe:
                 return True
             
         # diagonals check
-        return (self.board[1] == self.board[5] == self.board[9] == marker) or (self.board[3] == self.board[5] == self.board[7] == marker)
+        return ((self.board[1] == self.board[5] == self.board[9] == marker) or 
+               (self.board[3] == self.board[5] == self.board[7] == marker))
     
     def space_check(self, position:int) -> bool:
         return self.board[position] == ' '
