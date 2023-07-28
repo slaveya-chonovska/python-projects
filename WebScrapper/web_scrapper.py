@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from collections import namedtuple
 import os
+import io
 import csv
 import json
 import tldextract
@@ -34,8 +35,6 @@ class WebScrapper:
 
         self.repeat = repeat
         self.repeat_in_minutes = repeat_in_minutes
-        if self.repeat:
-            print(f"Scheduled repeat for every {self.repeat_in_minutes} seconds.")
 
         #some other checks for url and item length
         if not urlparse(url).scheme and not urlparse(url).netloc:
@@ -53,20 +52,17 @@ class WebScrapper:
         #if we need to record in csv
         if self.export_csv:
             #if no file name is given, make the default be the domain of the given website
-            self.csv_file_name = (f"{os.path.dirname(__file__)}\\records\\") + (tldextract.extract(url).domain + ".csv" if not csv_file_name else csv_file_name)
-            self.logger.info(f"The record csv file will have the name: '{self.csv_file_name}'.")
-            #if the csv file does not exist, create it and write the field headers
-            if not os.path.isfile(self.csv_file_name):
-                with open(self.csv_file_name,'w',encoding='utf-8') as file:
-                    csv_file = csv.writer(file)
-                    self.logger.info(f"CSV file headers written.")
-                    csv_file.writerow(("Title","Author","Link","IMG","Timestamp")) #field headers
+            self.csv_file_name = (f"{os.path.dirname(__file__)}\\records\\") + \
+                                 (tldextract.extract(url).domain + ".csv" if not csv_file_name else csv_file_name)
+            # then create the initial file
+            self.create_csv_file()
 
         self.export_json = export_json
         #if we need to record in json
         if self.export_json:
             #if no file name is given, make the default be the domain of the given website
-            self.json_file_name = (f"{os.path.dirname(__file__)}\\records\\") + (tldextract.extract(url).domain + ".json" if not json_file_name else json_file_name)
+            self.json_file_name = (f"{os.path.dirname(__file__)}\\records\\") + \
+                                  (tldextract.extract(url).domain + ".json" if not json_file_name else json_file_name)
             self.logger.info(f"The record json file will have the name: '{self.json_file_name}'.")
 
 #<----------------Request functions-------------------------------------------------->     
@@ -75,11 +71,11 @@ class WebScrapper:
     def get_data(self,found_items) -> namedtuple:
         books = namedtuple("Books","title author href_link img_link timestamp")
         for item in found_items:
-            self.logger.info("Getting item.")
+            self.logger.debug("Getting item.")
             title = item.find('strong')
             title = title.find(self.title_element).text.strip('\n')
 
-            author = item.find('div',attrs = {"class":self.author_class})
+            author = item.find('div', attrs = {"class":self.author_class})
             try:
                 author = author.find(self.author_inner_element).text.strip('\n')
             # sometimes author is empty
@@ -88,7 +84,7 @@ class WebScrapper:
 
             href_link = item.a['href']
             img_link = item.img['src']
-            #append the timestamp in a desired format
+            #append the timestamp in a desired format as well
             yield books(title,author,href_link,img_link,datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
 
     #get url request and loop through the pages to find the base of what we need to scrape
@@ -110,12 +106,21 @@ class WebScrapper:
         return self.get_data(found_items[:self.item_length])
     
 #<----------------CSV/JSON files functions-------------------------------------------------->   
- 
+
+    def create_csv_file(self):
+        self.logger.info(f"The record csv file will have the name: '{self.csv_file_name}'.")
+        #if the csv file does not exist, create it and write the field headers
+        if not os.path.isfile(self.csv_file_name):
+            with open(self.csv_file_name,'w',encoding='utf-8') as file:
+                csv_file = csv.writer(file)
+                self.logger.info(f"CSV file headers written.")
+                csv_file.writerow(("Title","Author","Link","IMG","Timestamp")) #field headers
+
     #create or open a csv file to record the data one by one
-    def to_csv(self,data) ->None:
+    def to_csv(self, data:namedtuple) -> None:
 
         # the file mode should be append to continue adding to the file
-        with open(self.csv_file_name,'a',encoding='utf-8') as file:
+        with open(self.csv_file_name, 'a', encoding='utf-8') as file:
             csv_file = csv.writer(file)
             self.logger.info(f"Putting data in the file {self.csv_file_name}")
             csv_file.writerow(data)
@@ -123,9 +128,18 @@ class WebScrapper:
     # export in json format
     def to_json(self):
 
-        with open(self.json_file_name,"a",encoding="utf-8") as file:
-            self.logger.info(f"Writting to JSON file.")
-            json.dump(list((item._asdict() for item in self.get_request())),file,ensure_ascii=False,indent=4)
+        with open(self.json_file_name, "rb+") as file:
+            #get item requested as a list
+            item_list = [item._asdict() for item in self.get_request()]
+            #get the json representation
+            json_array = json.dumps(item_list, ensure_ascii=False, indent=4)
+            #if file is empty just append the list
+            if os.path.getsize(self.json_file_name) <= 2:
+                file.write(json_array.encode())
+            #if it is not empty, seek the last position and append the new data inside the already existing list
+            else:
+                file.seek(-1, io.SEEK_END)
+                file.write(b', ' + json_array[1:].encode())        
 
 #<----------------Sheduler function-------------------------------------------------->  
 
@@ -141,7 +155,6 @@ class WebScrapper:
 
     #controller for the scrapping
     def scrape_data(self) -> None:
-        print(f"Scrapping from: {self.url}")
         self.logger.info(f"Scrapping from: {self.url}")
 
         self.logger.info("Printing the found data.")
@@ -155,15 +168,15 @@ class WebScrapper:
 
         #if we need to continue scrapping and no current jobs, create a shedule job
         if self.repeat and not schedule.get_jobs():
-            self.logger.info(f"Repeating every {self.repeat_in_minutes} seconds")
+            self.logger.info(f"Repeating every {self.repeat_in_minutes} minutes.")
             self.create_job()
 
 if __name__ == "__main__":
     urls = ["https://www.orangecenter.bg/knizharnitsa/nay-prodavani-knigi?p=1","https://www.ciela.com/knigi?p=1&product_list_order=position"]
     attributes = [('span','product-item-subnames','span'),('a','author-info','a')]
 
-    orange = WebScrapper(urls[0],attributes[0],export_csv=True,export_json=True,repeat = False)
-    ciela = WebScrapper(urls[1],attributes[1],export_csv=True,export_json=True,repeat = False)
+    orange = WebScrapper(urls[0],attributes[0],export_csv=False,export_json=True,repeat = False)
+    ciela = WebScrapper(urls[1],attributes[1],export_csv=False,export_json=True,repeat = False)
 
     orange.scrape_data()
     ciela.scrape_data()

@@ -1,69 +1,9 @@
-2023-07-25 19:08:45,177 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,180 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,180 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,181 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,181 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,181 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,181 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,183 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,183 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,183 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,184 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,184 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,184 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,184 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,185 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,185 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,186 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv
-2023-07-25 19:08:45,187 - web_scrapping_logger - INFO - Writting to JSON file.
-2023-07-25 19:08:45,187 - web_scrapping_logger - INFO - Getting request from: https://www.ciela.com/knigi?p=1&product_list_order=position
-2023-07-25 19:08:45,694 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,696 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,696 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,696 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,696 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,696 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,696 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,696 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,696 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,697 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,697 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,697 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,697 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,697 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,697 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,697 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,697 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,698 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,700 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,700 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,700 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,700 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,700 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,700 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,701 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,701 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,701 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,701 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,701 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,701 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,701 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,701 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,702 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,702 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,702 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,702 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,702 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,702 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,702 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,704 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,704 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:08:45,704 - web_scrapping_logger - INFO - Getting item.
+2023-07-28 14:14:46,458 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:14:46,460 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:14:46,460 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:14:46,460 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:14:46,460 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:14:46,460 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:14:46,460 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:14:46,460 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:14:46,461 - web_scrapping_logger - DEBUG - Getting item.

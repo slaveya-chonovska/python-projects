@@ -150,7 +150,7 @@ class WarGame:
             #append result to csv
             self.add_round_to_csv([player1_total_turn_cards, 
                                    player2_total_turn_cards,
-                                   player1_card_rank[0], player2_card_rank[0],"Player 1",str(False)])
+                                   player1_card_rank[0], player2_card_rank[0], "Player 1", str(False)])
             #if this was a war round, remove/append multiple cards
             if war:
                 self.war_round_card_removal("player1",player1_face_down_cards,player2_face_down_cards)
@@ -166,7 +166,7 @@ class WarGame:
             #append result to csv
             self.add_round_to_csv([player1_total_turn_cards, 
                                    player2_total_turn_cards,
-                                   player1_card_rank[0], player2_card_rank[0],"Player 2",str(False)])
+                                   player1_card_rank[0], player2_card_rank[0], "Player 2", str(False)])
             #if this was a war round, remove/append multiple cards
             if war:
                 self.war_round_card_removal("player2",player1_face_down_cards,player2_face_down_cards)
@@ -178,7 +178,7 @@ class WarGame:
             print("WAR!")
             self.add_round_to_csv([player1_total_turn_cards, 
                                    player2_total_turn_cards,
-                                   player1_card_rank[0], player2_card_rank[0],"None",str(True)])
+                                   player1_card_rank[0], player2_card_rank[0], "None", str(True)])
             self.war(player1_card,player2_card,continuing_card_index)
         time.sleep(2)
         #after continue playing
@@ -190,8 +190,8 @@ class WarGame:
         # if winner is player 1, add both face down stacks to his win stack
         if winner == "player1":
 
-            self._player1_won_stack +=(player2_face_down_cards)
-            self._player1_won_stack +=(player1_face_down_cards)
+            self._player1_won_stack += (player2_face_down_cards)
+            self._player1_won_stack += (player1_face_down_cards)
 
         # if winner is player 2, add both face down stacks to his win stack
         else:

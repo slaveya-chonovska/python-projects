@@ -1,51 +1,51 @@
-2023-07-25 19:07:22,767 - web_scrapping_logger - INFO - Creating the web scrapper class instance.
-2023-07-25 19:07:22,781 - web_scrapping_logger - INFO - The record csv file will have the name: 'd:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv'.
-2023-07-25 19:07:22,782 - web_scrapping_logger - INFO - The record json file will have the name: 'd:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.json'.
-2023-07-25 19:07:22,782 - web_scrapping_logger - INFO - Creating the web scrapper class instance.
-2023-07-25 19:07:22,782 - web_scrapping_logger - INFO - The record csv file will have the name: 'd:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.csv'.
-2023-07-25 19:07:22,782 - web_scrapping_logger - INFO - The record json file will have the name: 'd:\mentors_tasks\project_exercises\Web_Scrapper\records\ciela.json'.
-2023-07-25 19:07:22,782 - web_scrapping_logger - INFO - Scrapping from: https://www.orangecenter.bg/knizharnitsa/nay-prodavani-knigi?p=1
-2023-07-25 19:07:22,782 - web_scrapping_logger - INFO - Printing the found data.
-2023-07-25 19:07:22,783 - web_scrapping_logger - INFO - Getting request from: https://www.orangecenter.bg/knizharnitsa/nay-prodavani-knigi?p=1
-2023-07-25 19:07:23,607 - web_scrapping_logger - INFO - Getting request from: https://www.orangecenter.bg/knizharnitsa/nay-prodavani-knigi?p=2
-2023-07-25 19:07:23,894 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,895 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,895 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,896 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,896 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,896 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,896 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,897 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,897 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,898 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,898 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,899 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,899 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,899 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,899 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,900 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,900 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,900 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,900 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,901 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,901 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,902 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,902 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,903 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,904 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,904 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,905 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,906 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,906 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,908 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,909 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,909 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,909 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,910 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,910 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,913 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,914 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,914 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,914 - web_scrapping_logger - INFO - Getting item.
-2023-07-25 19:07:23,916 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\Web_Scrapper\records\orangecenter.csv
-2023-07-25 19:07:23,916 - web_scrapping_logger - INFO - Getting item.
+2023-07-28 14:08:58,438 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,440 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,440 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,441 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,441 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,441 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,442 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,442 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,443 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,443 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,443 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,444 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,444 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,445 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,445 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,446 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,446 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,447 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,447 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,448 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,448 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,448 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,449 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,449 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,449 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,450 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,450 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,451 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,452 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,452 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,453 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,453 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,454 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,455 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,455 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,455 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,456 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,456 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,456 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,457 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,457 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,457 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,458 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:58,458 - web_scrapping_logger - INFO - Putting data in the file d:\mentors_tasks\project_exercises\python-projects\WebScrapper\records\orangecenter.csv
+2023-07-28 14:08:58,459 - web_scrapping_logger - INFO - Getting request from: https://www.orangecenter.bg/knizharnitsa/nay-prodavani-knigi?p=1
+2023-07-28 14:08:58,867 - web_scrapping_logger - INFO - Getting request from: https://www.orangecenter.bg/knizharnitsa/nay-prodavani-knigi?p=2
+2023-07-28 14:08:59,165 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:59,166 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:59,166 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:59,166 - web_scrapping_logger - DEBUG - Getting item.
+2023-07-28 14:08:59,166 - web_scrapping_logger - DEBUG - Getting item.

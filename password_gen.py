@@ -2,7 +2,7 @@ import string
 import secrets
 
 #a function to randomly append certain chars together x number of times
-def put_chars_at_random(min_range:int,max_range:int,chars_group:str) -> None:
+def put_chars_at_random(min_range:int,max_range:int,chars_group:str) -> str:
     psw = ""
     range_choice = secrets.choice(range(min_range,max_range))
     for _ in range(range_choice):

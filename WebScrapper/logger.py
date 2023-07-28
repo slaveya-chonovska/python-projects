@@ -1,6 +1,7 @@
 import logging
 from logging.handlers import RotatingFileHandler
 import os
+import sys
 
 #get or create logger
 def initialize_logger() -> logging:
@@ -15,8 +16,12 @@ def initialize_logger() -> logging:
         #set the format and add it
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
-        # add rotating handler to logger
+        #create handler for output to console
+        streamHandler = logging.StreamHandler(sys.stdout)
+        streamHandler.setLevel(logging.INFO)
+        # add rotating and stdout handler to logger
         logger.addHandler(handler)
+        logger.addHandler(streamHandler)
 
     return logger
 
